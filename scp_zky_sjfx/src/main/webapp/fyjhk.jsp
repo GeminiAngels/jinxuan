@@ -1,4 +1,4 @@
-<%@page contentType="text/html;charset=utf-8" language="java" %>
+﻿<%@page contentType="text/html;charset=utf-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -64,9 +64,10 @@
 	<div class="fyhk">
 		<h3>（1）住宿</h3>
 		<p>
-			入住酒店：北京世纪金源香山商旅酒店（http://www.empark.com.cn/fragranthill/）
-			<br/>酒店地址：北京海淀区北正黄旗59号，近香山公园东门
-			<br/>房型价格：标间（460元/双早），标间单床位（230元/单早），单人间（420元/单早）
+			入住酒店1:北京世纪金源香山商旅酒店（已满）
+                        <br/>入住酒店2：北京香山饭店（http://www.xsfd.com/）
+			<br/>北京海淀区西山风景区香山公园内，距离会议酒店（北京世纪金源香山商旅酒店）步行约5分钟。
+			<br/>房型价格：标间（460元/双早），标间单床位（230元/单早），标间（410元/单早）
 			<br/><b style="font-weight: bold;">房间有限，请完成注册后尽快在个人信息中完善住宿信息，以便会务组为您安排房间。</b>
 		</p>
 		<h3>（2）交通</h3>
