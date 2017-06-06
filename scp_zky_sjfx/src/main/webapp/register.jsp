@@ -1,4 +1,7 @@
 <%@page contentType="text/html;charset=utf-8" language="java" %>
+<%@ page import="java.util.Date"%>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Locale" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -37,9 +40,33 @@
 <body>
 <!-- 头部模块 -->
 <%@include file="/inc/headbar.jsp" %>
+
+<%
+	java.util.Date nowdate=new java.util.Date();
+	String endDate = "2017-06-06 11:00";
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.CHINA);
+	Date d = sdf.parse(endDate);
+	boolean flag = d.before(nowdate);
+%>
 <div id="contactWrap">
 	<form id="registerForm">
 		<div class="overlay">
+			<%
+				if(flag) {
+			%>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2 class="sectionTitle">
+							温馨提示
+						</h2>
+						<p class="animated"><div class="alert alert-warning text-center">报名时间为 <b style="color:red"><%=endDate%></b> 前，目前已过截至时间，注册报名服务已关闭...</div></p>
+					</div>
+				</div>
+			</div>
+			<%
+				} else {
+			%>
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
@@ -248,6 +275,9 @@
 					</div>
 				</div>
 			</div>
+			<%
+				}
+			%>
 		</div>
 	</form>
 </div> <!-- /contactWrap -->
